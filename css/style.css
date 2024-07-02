@@ -1,0 +1,99 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+ul, ol{
+     list-style: none;
+}
+a{
+     color: inherit;
+     text-decoration: none;
+}
+button, input, textarea, option, select{
+     border: 0;
+     background-color: transparent;
+     display: block;
+}
+img{
+     display: block;
+     max-width: 100%;
+}
+*::before, *::after{
+     box-sizing: border-box;
+}
+/* 리셋 끝 */
+
+header{
+     height: 50px;
+     background-color: #132822;
+}
+header .wrap{
+     height: 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+header .wrap h1 a img{
+     width: 150px;
+}
+header .wrap h1{
+     order: 2;
+}
+header .wrap .nav-opn{
+     order: 1;
+}
+header .wrap .nav-opn a img{
+     width: 20px;
+}
+header .wrap .sns-opn{
+     order: 3;
+}
+header .wrap .sns-opn a img{
+     width: 20px;
+}
+header .wrap .nav-opn{
+     width: 40px;
+     display: flex;
+     justify-content: center;
+}
+header .wrap .sns-opn{
+     width: 40px;
+     display: flex;
+     justify-content: center;
+}
+
+header .wrap nav{
+     display: none;
+}
+
+
+@media (min-width: 764px){
+
+}
+
+@media (min-width: 1200px){
+     header{
+          height: 150px;
+     }
+     header .wrap{
+          width: 1200px;
+          height: 100%;
+          margin: 0 auto;
+          position: relative;
+     }
+     header .wrap .nav-opn,
+     header .wrap .sns-opn{
+          display: none;
+     }
+     header .wrap h1{
+          order: unset;
+          position: absolute;
+          top: 40px;
+          left: 50%;
+          transform: translateX(-50%);
+     }
+     header .wrap h1 a img{
+          width: 250px;
+     }
+}
