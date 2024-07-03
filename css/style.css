@@ -220,9 +220,19 @@ header .wrap nav .gnb li a:focus-within + .list{
 .wrapper .section1 .box1 .text p{
      margin-bottom: 25px;
 }
+.wrapper .section2{
+     margin: 10px 0;
+}
 .wrapper .section2 .box1{
      display: grid;
      grid-template-columns: 50% 50%;
+     text-align: center;
+}
+.wrapper .section2 .box1 .text{
+     background-color: rgba(15, 5, 5, 0.918);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
 }
 
 /* header .wrap nav .gnb li a:focus + .list{
@@ -260,6 +270,14 @@ header .wrap nav .gnb li a:focus-within + .list{
           transform: unset;
           border: 1px solid #fff;
           padding: 3px 12px;
+     }
+     .wrapper .section1{
+          display: flex;
+          width: 100%;
+          
+     }
+     .wrapper .section1 .box1{
+          margin: 0 auto;
      }
 }
 
@@ -301,7 +319,6 @@ header .wrap nav .gnb li a:focus-within + .list{
           font-weight: lighter;
           font-size: 13px;
           margin: 0 auto;
-          
      }
 
 
