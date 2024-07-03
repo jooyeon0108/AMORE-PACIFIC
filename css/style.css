@@ -24,16 +24,13 @@ img{
 }
 /* 리셋 끝 */
 
-header{
-     height: 50px;
-     background-color: #132822;
-     
-}
+/* header{} */
 header .wrap{
      height: 50px;
      display: flex;
      justify-content: space-between;
      align-items: center;
+     background-color: #132822;
 }
 header .wrap h1 a img{
      width: 150px;
