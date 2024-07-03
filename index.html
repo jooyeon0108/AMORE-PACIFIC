@@ -10,61 +10,97 @@
      <header>
           <div class="wrap">
                <h1><a href="#"><img src="./images/logo.png" alt=""></a></h1>
-               <button class="nav-opn"><a href="#"><img src="./images/btn_aside_open.png" alt=""></a></button>
-               <button class="sns-opn"><a href="#"><img src="./images/btn_sns_open.png" alt=""></a></button>
+               <button class="nav-opn"><img src="./images/btn_aside_open.png" alt=""></button>
+               <button class="sns-opn"><img src="./images/btn_sns_open.png" alt=""></button>
                <nav>
                     <button class="nav-cls">
-                         <a href="#"><img src="./images/btn_aside_close.png" alt=""></a>
+                         <img src="./images/btn_aside_close.png" alt="">
                     </button>
                     <ul class="util">
                          <li><a href="#">STORE</a></li>
                          <li><a href="#">FACEBOOK</a></li>
                          <li><a href="#">SEARCH</a></li>
+                         <li>
+                              <form action="">
+                                   <input type="text">
+                                   <button class="util-sch">
+                                        <img src="./images/btn_util_search.png" alt="">
+                                   </button>
+                              </form>
+                         </li>
                     </ul>
                     <ul class="gnb">
                          <li><!-- 항목1 -->
                               <a href="#">
-                                   <p>AT THIS MOMENT</p><!-- 항목1의 설명 -->
-                                   <ul class="list">
-                                        <li><a href="#">Best Seller</a></li> <!-- 하위 항목 1 -->
-                                        <li><a href="#">Highlight</a></li><!-- 하위 항목 2 -->
-                                   </ul>
+                                   <p>AT THIS MOMENT</p>
                               </a>
+                              <ul class="list">
+                                   <li><a href="#">Best Seller</a></li> 
+                                   <li><a href="#">Highlight</a></li>
+                              </ul>
                          </li>
                          <li><!-- 항목2 -->
                               <a href="#">
-                                   <p>HERITAGE OF AMOREPACIFIC</p><!-- 항목2의 설명 -->
-                                   <ul class="list">
-                                        <li><a href="#">Origin</a></li> <!-- 하위항목1 -->
-                                        <li><a href="#">Botanical Science</a></li><!-- 하위항목2 -->
-                                        <li><a href="#">Film & Art book</a></li><!-- 하위항목3 -->
-                                        <li><a href="#">History</a></li><!-- 하위항목2 -->
-                                        <li><a href="#">Spa</a></li><!-- 하위항목2 -->
-                                   </ul>
+                                   <p>HERITAGE OF AMOREPACIFIC</p>
                               </a>
+                              <ul class="list">
+                                   <li><a href="#">Origin</a></li> 
+                                   <li><a href="#">Botanical Science</a></li>
+                                   <li><a href="#">Film & Art book</a></li>
+                                   <li><a href="#">History</a></li>
+                                   <li><a href="#">Spa</a></li>
+                              </ul>
                          </li>
                          <li><!-- 항목3 -->
                               <a href="#">
-                                   <p>PRODUCT</p><!-- 항목3의 설명 -->
-                                   <ul class="list">
-                                        <li><a href="#">Skin Care</a></li> <!-- 하위항목1 -->
-                                        <li><a href="#">Make Up</a></li><!-- 하위항목2 -->
-                                        <li><a href="#">Product Advisor</a></li><!-- 하위항목3 -->
-                                   </ul>
+                                   <p>PRODUCT</p>
                               </a>
+                              <ul class="list">
+                                   <li><a href="#">Skin Care</a></li> 
+                                   <li><a href="#">Make Up</a></li>
+                                   <li><a href="#">Product Advisor</a></li>
+                              </ul>
                          </li>
                          <li><!-- 항목4 -->
                               <a href="#">
-                                   <p>MEDIA GALLERY</p><!-- 항목4의 설명 -->
-                                   <ul class="list">
-                                        <li><a href="#">Video Clips</a></li> <!-- 하위항목1 -->
-                                        <li><a href="#">Prints</a></li><!-- 하위항목2 -->
-                                   </ul>
+                                   <p>MEDIA GALLERY</p>
                               </a>
+                              <ul class="list">
+                                   <li><a href="#">Video Clips</a></li> 
+                                   <li><a href="#">Prints</a></li>
+                              </ul>
                          </li>
                     </ul>
                </nav>
           </div>
      </header>
+
+     <div class="banner">
+          <img class="m" src="./images/img_visual_1_m.jpg" alt="">
+          <img class="pc" src="./images/img_visual_1.jpg" alt="">
+               <p>시간을 앞도하는<br>
+                    단 하나의 안티에이징<br>
+                    TIME RESPONSE Skin Renewal Creme<br>
+                    AMOREPACIFIC의 독자적인 녹차 콜렉션이<br>
+                    무너진 피부 시간을 되돌리다.</p>
+               <a href="#">VIEW DETAILS</a>
+          
+     </div>
+
+
+     <script>
+
+          const nav = document.querySelector("nav");
+          const btnOpn = document.querySelector(".nav-opn")
+          const btnCls = document.querySelector(".nav-cls")
+      
+          btnOpn.addEventListener("click", function() {
+              nav.style.left = 0
+          });
+          btnCls.addEventListener("click", function() {
+              nav.style.left = "-100%";
+          });
+      </script>
+
 </body>
 </html>

@@ -27,6 +27,7 @@ img{
 header{
      height: 50px;
      background-color: #132822;
+     
 }
 header .wrap{
      height: 50px;
@@ -43,13 +44,13 @@ header .wrap h1{
 header .wrap .nav-opn{
      order: 1;
 }
-header .wrap .nav-opn a img{
+header .wrap .nav-opn img{
      width: 20px;
 }
 header .wrap .sns-opn{
      order: 3;
 }
-header .wrap .sns-opn a img{
+header .wrap .sns-opn img{
      width: 20px;
 }
 header .wrap .nav-opn{
@@ -64,12 +65,144 @@ header .wrap .sns-opn{
 }
 
 header .wrap nav{
+     position: fixed;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: #132822;
+     color: #fff9;
+     font-weight: lighter;
+     font-size: 13px;
+     left: -100%;
+     z-index: 1; /* z-index : 기본값 0인 것들 위로 나타남. */
+     
+}
+header .wrap nav .nav-cls img{
+     width: 20px;
+}
+header .wrap nav .nav-cls{
+     padding: 15px;
+}
+header .wrap nav .util{
+     display: flex;
+     justify-content: center;
+     margin-bottom: 24px;
+}
+header .wrap nav .util li::after{
+     content: '|';
+     display: block;
+     margin: 0 10px;
+}
+header .wrap nav .util li:nth-child(3)::after{
+     content: none;
+}
+header .wrap nav .util li{
+     display: flex;
+}
+header .wrap nav .util li:last-child{
      display: none;
+}
+header .wrap nav .gnb li a{
+     display: block;
+     text-align: center;
+}
+header .wrap nav .gnb li a p{
+     padding: 20px 0;
+}
+header .wrap nav .gnb li a p:hover{
+     background-color: #10201b;
+}
+header .wrap nav .gnb .list{
+     
+}
+header .wrap nav .gnb .list li a{
+     display: block;
+     padding: 20px 0;
+     background-color: #183028;
+     border-top: 1px solid #10201b;
+     position: relative;
+}
+header .wrap nav .gnb li .list{
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.5s ease-out;
+}
+header .wrap nav .gnb li .list .open{
+     max-height: 500px;
+}
+
+header .wrap nav .gnb li a:focus-within + .list{
+     max-height: 500px;
+}
+
+.banner{
+     color: #fff;
+     font-size: 13px;
+     position: relative;
+     text-align: center;
+     
+     
+}
+.banner .m{
+     width: 100%;
+}
+.banner .pc{
+     display: none;
+}
+.banner p{
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translateX(-50%);
+}
+.banner a{
+     display: block;
+     position: absolute;
+     top: 70%;
+     left: 50%;
+     transform: translateX(-50%);
+     border: 1px solid #fff;
+     padding: 4px 13px;
 }
 
 
-@media (min-width: 764px){
 
+/* header .wrap nav .gnb li a:focus + .list{
+     max-height: 0;
+} */
+
+@media (min-width: 764px){
+     .banner{
+          
+     }
+     .banner .m{
+          display: none;
+     }
+     .banner .pc{
+          display: none;
+     }
+     .banner{
+          background-image: url(../images/img_visual_1.jpg);
+          height: 370px;
+          background-size: cover;
+          background-position: center;
+     }
+     .banner p{
+          position: absolute;
+          top: 20%;
+          transform: unset;
+          left: 56%;
+          text-align: left;
+     }
+     .banner a{
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 56%;
+          transform: unset;
+          border: 1px solid #fff;
+          padding: 3px 12px;
+     }
 }
 
 @media (min-width: 1200px){
@@ -83,7 +216,8 @@ header .wrap nav{
           position: relative;
      }
      header .wrap .nav-opn,
-     header .wrap .sns-opn{
+     header .wrap .sns-opn,
+     header .wrap nav .nav-cls{
           display: none;
      }
      header .wrap h1{
@@ -96,4 +230,133 @@ header .wrap nav{
      header .wrap h1 a img{
           width: 250px;
      }
+
+
+
+     header .wrap nav{
+          position: unset;
+          top: unset;
+          width: unset;
+          height: unset;
+          background-color: unset;
+          color: #fff9;
+          font-weight: lighter;
+          font-size: 13px;
+          margin: 0 auto;
+          
+     }
+
+
+
+     header .wrap nav .util{
+          display: flex;
+          justify-content: unset;
+          margin-bottom: unset;
+          position: absolute;
+          right: 10px;
+          top: 18px;
+          font-size: 12px;
+     }
+     header .wrap nav .util li::after{
+          content: '|';
+          display: block;
+          margin: 0 10px;
+     }
+     header .wrap nav .util li:last-child::after{
+          content: none;
+     }
+     header .wrap nav .util li:last-child{
+          display: unset;
+     }
+     header .wrap nav .util li:last-child form{
+         display: flex;
+         border-bottom: 1px solid #fff9;
+         align-items: center;
+     }
+     header .wrap nav .util li:last-child form input{
+          position: relative;
+          width: 150px;
+          padding: 2px;
+     }
+     header .wrap nav .util li:last-child form .util-sch{
+          position: absolute;
+          right: 2px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+     }
+     header .wrap nav .util li:last-child form .util-sch img{
+          width: 13px;
+     }
+     header .wrap nav .util li:nth-child(3){
+          display: none;
+     }
+
+     header .wrap nav .gnb{
+          display: flex;
+          gap: 80px;
+     }
+     header .wrap{
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+     }
+
+
+
+
+
+
+
+
+     header .wrap nav .gnb li a{
+          display: block;
+          text-align: center;
+     }
+     header .wrap nav .gnb li a p{
+          padding: 5px 0;
+          margin-bottom: 10px;
+          border-bottom: 2px solid transparent;
+     }
+     header .wrap nav .gnb li a p:hover{
+          background-color: unset;
+          border-bottom: 2px solid #fff9;
+     }
+     header .wrap nav .gnb .list{
+          
+     }
+     header .wrap nav .gnb .list li a{
+          display: block;
+          padding: 20px 0;
+          background-color: #183028;
+          border-top: 1px solid #10201b;
+          position: relative;
+     }
+     header .wrap nav .gnb li .list{
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease-out;
+     }
+     header .wrap nav .gnb li .list .open{
+          max-height: 500px;
+     }
+     
+     header .wrap nav .gnb li a:focus-within + .list{
+          max-height: 500px;
+     }
+
+     .banner{
+          height: 595px;
+          background-position: center center;
+          background-size: cover;
+     }
+     .banner p{
+          left: 60%;
+     }
+     .banner a{
+          left: 60%;
+          top: 40%;
+     }
+
 }
