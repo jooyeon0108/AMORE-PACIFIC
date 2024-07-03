@@ -154,6 +154,7 @@ header .wrap nav .gnb li a:focus-within + .list{
      top: 55%;
      left: 50%;
      transform: translateX(-50%);
+     width: 100%;
 }
 .banner a{
      display: block;
@@ -165,7 +166,64 @@ header .wrap nav .gnb li a:focus-within + .list{
      padding: 4px 13px;
 }
 
-
+.wrapper{
+     padding: 12px;
+     color: #fff;
+}
+.wrapper div .pc{
+     display: none;
+}
+.wrapper div .m{
+     width: 100%;
+}
+.wrapper .section1{
+     text-align: center;
+}
+.wrapper .section1 .box1{
+     position: relative;
+}
+.wrapper .section1 .box1 .text{
+     width: 100%;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     top: 50%;
+} 
+.wrapper .section1 .box2{
+     position: relative;
+}
+.wrapper .section1 .box2 .text{
+     width: 100%;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+}
+.wrapper .section1 .box2 .text a{
+     border: 1px solid #fff;
+     padding: 4px 9px;
+}
+.wrapper .section1 .box2 .text p{
+     margin-bottom: 25px;
+}
+.wrapper .section1 .box1 .text{
+     width: 100%;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+}
+.wrapper .section1 .box1 .text a{
+     border: 1px solid #fff;
+     padding: 4px 16px;
+}
+.wrapper .section1 .box1 .text p{
+     margin-bottom: 25px;
+}
+.wrapper .section2 .box1{
+     display: grid;
+     grid-template-columns: 50% 50%;
+}
 
 /* header .wrap nav .gnb li a:focus + .list{
      max-height: 0;
